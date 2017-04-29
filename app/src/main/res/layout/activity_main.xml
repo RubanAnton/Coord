@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.antonruban.gpstracker.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+        <Button
+            android:text="Get_Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/location"
+            android:onClick="Location" />
+
+        <Button
+            android:text="Hash_String"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stringHash"
+            android:onClick="HashString"
+            android:layout_below="@+id/hash"
+            android:layout_alignStart="@+id/hash" />
+
+        <Button
+            android:text="Hash_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hash"
+            android:onClick="ClickHash"
+            android:layout_below="@+id/location"
+            android:layout_alignStart="@+id/location" />
+
+        <Button
+            android:text="Video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/video"
+            android:onClick="ClickVideo"
+            android:layout_below="@+id/stringHash"
+            android:layout_alignStart="@+id/stringHash" />
+
+        <Button
+            android:text="SenToServer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/hash"
+            android:onClick="onClickPost"/>
+
+        <Button
+            android:text="Stop_Send"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/stop_send"
+            android:onClick="onStopClick"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/video"
+            android:id="@+id/textView"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+</RelativeLayout>
